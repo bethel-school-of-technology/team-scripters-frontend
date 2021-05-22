@@ -102,5 +102,8 @@
       }
     }
   },
-  "defaultProject": "angular-war-room"
+  "defaultProject": "angular-war-room",
+  "cli": {
+    "analytics": "adafc04e-c870-40b4-b32c-41aa186576fc"
+  }
 }
