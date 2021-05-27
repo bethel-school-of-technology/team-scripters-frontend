@@ -14,18 +14,7 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  signup() {
-    console.log(this.newUser);
-    this.myUserService.registerUser(this.newUser).subscribe(myResponseObject => {
-      console.log(myResponseObject);
-      if (myResponseObject.status === 200){
-        //successful login
-        window.alert(myResponseObject.message);
-        localStorage.setItem("myAppToken", myResponseObject.token);
-        this.myRouter.navigate(["/profile"]);
-      } else{
-        window.alert(myResponseObject.message);
-      }
-    })
+signup() {
+  console.log(this.newUser);
 }
 }

@@ -14,9 +14,10 @@ export class UserService {
   //Function to make a server request to /api/users/register route
   //Type of REquest: POST
   //Need to provide new user data(Comes from component)
-  registerUser(newUser: User): Observable<any>{
-    return this.myHttp.post(this.serverUserURL+"/register", newUser);
-  }
+
+  // registerUser(newUser: User): Observable<any>{
+  //   return this.myHttp.post(this.serverUserURL+"/register", newUser);
+  // }
 
 
   //Function to make a server request to api/users/login route
@@ -33,11 +34,12 @@ export class UserService {
   //Function to make a server request to /api/users/profile route
   //Type of request: GET
   //Need to provie an authorization header with a token from login
-  getUserProfile(): Observable<any>{
-    let myHeaders = {
-      Authorization: localStorage.getItem("myAppToken")
-    }
-    return this.myHttp.get(this.serverUserURL+"/profile", {headers: myHeaders});
-  }
+
+  // getUserProfile(): Observable<any>{
+  //   let myHeaders = {
+  //     Authorization: localStorage.getItem("myAppToken")
+  //   }
+  //   return this.myHttp.get(this.serverUserURL+"/profile", {headers: myHeaders});
+  // }
 
 } 
