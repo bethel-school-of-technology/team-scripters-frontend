@@ -9,12 +9,12 @@ import { UserService } from '../services/user.service';
 })
 export class SignupComponent implements OnInit {
   //Need a model made of the User.
- newUser: User = new User();
+//  newUser: User = new User();
   constructor(private myUserService: UserService, private myRouter: Router) { }
 
   ngOnInit(): void {
   }
-signup() {
-  console.log(this.newUser);
-}
+// signup() {
+//   console.log(this.newUser);
+// }
 }
