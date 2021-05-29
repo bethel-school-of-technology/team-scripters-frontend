@@ -1,20 +1,36 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { UserService } from '../services/user.service';
+// <<<<<<< frontend-funct
+import { Signup } from '../models/signup';
+=======
+// import { Router } from '@angular/router';
+// import { UserService } from '../services/user.service';
+// >>>>>>> frontend-dev
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent implements OnInit {
-  //Need a model made of the User.
-//  newUser: User = new User();
-  constructor(private myUserService: UserService, private myRouter: Router) { }
+// <<<<<<< frontend-funct
+  model: Signup = new Signup();
 
-  ngOnInit(): void {
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  onSubmit() {
+    console.log('Successful signup', this.model);
   }
-// signup() {
-//   console.log(this.newUser);
-// }
+=======
+//   //Need a model made of the User.
+// //  newUser: User = new User();
+//   constructor(private myUserService: UserService, private myRouter: Router) { }
+
+//   ngOnInit(): void {
+//   }
+// // signup() {
+// //   console.log(this.newUser);
+// // }
+// >>>>>>> frontend-dev
 }
