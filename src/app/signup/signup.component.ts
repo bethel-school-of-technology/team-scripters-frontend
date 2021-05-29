@@ -13,22 +13,24 @@ export class SignupComponent implements OnInit {
 // <<<<<<< frontend-funct
 model: User = new User();
 
-  constructor() {}
+  constructor(private myUserService: UserService, private myRouter: Router) {}
 
   ngOnInit(): void {}
 
   onSubmit() {
-    console.log('Successful signup', this.model);
+    // console.log('Successful signup', this.model);
+    this.myUserService.registerUser(this.model).subscribe(myResponseObject => {
+      console.log(myResponseObject);
+      if(myResponseObject.status === 200){
+        //successful Login
+        window.alert(myResponseObject.message);
+        localStorage.setItem("myAppToken", myResponseObject.token);
+        this.myRouter.navigate(["/profile"]);
+      } else{
+        //Unsuccessful Login
+        window.alert(myResponseObject.message);
+      }
+    })
   }
 
-//   //Need a model made of the User.
-// //  newUser: User = new User();
-//   constructor(private myUserService: UserService, private myRouter: Router) { }
-
-//   ngOnInit(): void {
-//   }
-// // signup() {
-// //   console.log(this.newUser);
-// // }
-// >>>>>>> frontend-dev
 }
