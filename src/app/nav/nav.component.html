@@ -1,12 +1,19 @@
 <p>WarRoom</p>
 <nav>
        <button>
-           <a routerLink="login" routerLinkActive="active">login</a>
+           <a *ngIf="!getToken()" routerLink="login" routerLinkActive="active">login</a>
        </button> 
        <button>
-           <a routerLink="signup" routerLinkActive="active">signup</a>
+           <a *ngIf="!getToken()" routerLink="signup" routerLinkActive="active">signup</a>
        </button>
        <button>
-           <a routerLink="profile" routerLinkActive="active">profile</a>
-       </button>
+           <a  routerLink="profile" routerLinkActive="active">profile</a>
+        </button>
+       <button>
+           <a (click)="logout()">Logout</a>
+        </button>
+
 </nav>
+<!-- Add to the profile button to hide when not logged in 
+ *ngIf="getToken()" 
+ *ngIf="getToken()" -->
