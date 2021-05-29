@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-// <<<<<<< frontend-funct
-import { Signup } from '../models/signup';
-=======
-// import { Router } from '@angular/router';
-// import { UserService } from '../services/user.service';
-// >>>>>>> frontend-dev
+import { FormsModule } from '@angular/forms';
+import { User } from '../models/signup';
+import { Router } from '@angular/router';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-signup',
@@ -13,7 +11,7 @@ import { Signup } from '../models/signup';
 })
 export class SignupComponent implements OnInit {
 // <<<<<<< frontend-funct
-  model: Signup = new Signup();
+model: User = new User();
 
   constructor() {}
 
@@ -22,7 +20,7 @@ export class SignupComponent implements OnInit {
   onSubmit() {
     console.log('Successful signup', this.model);
   }
-=======
+
 //   //Need a model made of the User.
 // //  newUser: User = new User();
 //   constructor(private myUserService: UserService, private myRouter: Router) { }

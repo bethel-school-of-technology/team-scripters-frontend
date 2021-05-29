@@ -1,1 +1,47 @@
-<p>profile works!</p>
+<div class="container">
+    <div class="row profile">
+		<div class="col-md-3">
+			<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				<div class="profile-userpic">
+					<img src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">
+				</div>
+				<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						{{currentUser.firstName}} {{currentUser.lastName}}
+					</div>
+					<div class="profile-usertitle-username">
+						{{currentUser.username}}
+					</div>
+					<div class="profile-usertitle-name">
+						{{currentUser.email}}
+					</div>
+				</div>
+				<!-- END SIDEBAR USER TITLE -->
+				<!-- SIDEBAR MENU -->
+				<div class="userOptions">
+					<ul class="nav">
+						<li class="active">
+							<a href="#">
+							<i class="glyphicon glyphicon-edit"></i>
+							Create Posts</a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="glyphicon glyphicon-user"></i>
+							Profile Settings </a>
+						</li>
+					</ul>
+				</div>
+				<!-- END MENU -->
+			</div>
+		</div>
+		<div class="col-md-9">
+            <div class="profile-content">
+			  ----Posts----
+            </div>
+		</div>
+	</div>
+</div>
