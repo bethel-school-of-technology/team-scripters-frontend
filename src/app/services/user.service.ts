@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Signup } from '../models/signup';
 
 @Injectable({
   providedIn: 'root'
@@ -16,8 +17,8 @@ export class UserService {
   //Need to provide new user data(Comes from component)
 
   //Change 'any' to the user model when available
-  registerUser(newUser: any): Observable<any>{
-    return this.myHttp.post(this.serverUserURL+"/register", newUser);
+  registerUser(newUser: Signup): Observable<any>{
+    return this.myHttp.post(this.serverUserURL+"/signup", newUser);
   }
 
 

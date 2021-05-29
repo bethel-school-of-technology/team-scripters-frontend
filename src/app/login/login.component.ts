@@ -11,11 +11,6 @@ import { UserService } from '../services/user.service';
 })
 export class LoginComponent implements OnInit {
   model: Login = new Login();
-  //better to use models of this loginform? more secure?
-  // loginform = {
-  //   username: "",
-  //   pasword: ""
-  // }
 
   constructor(private myUserService: UserService, private myRouter: Router) { }
 
@@ -23,7 +18,7 @@ export class LoginComponent implements OnInit {
   }
   onSubmit() {
     console.log('Submit Successful: ', this.model);
-    this.myUserService.loginUser(this.model.login, this.model.password).subscribe(myResponseObject => {
+    this.myUserService.loginUser(this.model.username, this.model.password).subscribe(myResponseObject => {
       console.log(myResponseObject);
       if (myResponseObject.status === 200){
         //successful login

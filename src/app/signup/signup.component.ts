@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-// <<<<<<< frontend-funct
+import { Router } from '@angular/router';
 import { Signup } from '../models/signup';
-=======
-// import { Router } from '@angular/router';
-// import { UserService } from '../services/user.service';
-// >>>>>>> frontend-dev
+import { UserService } from '../services/user.service';
+
 
 @Component({
   selector: 'app-signup',
@@ -12,25 +10,26 @@ import { Signup } from '../models/signup';
   styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent implements OnInit {
-// <<<<<<< frontend-funct
   model: Signup = new Signup();
 
-  constructor() {}
+  constructor(private myUserService: UserService, private myRouter: Router) {}
 
   ngOnInit(): void {}
 
   onSubmit() {
-    console.log('Successful signup', this.model);
+    // console.log('Successful signup', this.model);
+    this.myUserService.registerUser(this.model).subscribe(myResponseObject => {
+      console.log(myResponseObject);
+      if(myResponseObject.status === 200){
+        //successful Login
+        window.alert(myResponseObject.message);
+        localStorage.setItem("myAppToken", myResponseObject.token);
+        this.myRouter.navigate(["/profile"]);
+      } else{
+        //Unsuccessful Login
+        window.alert(myResponseObject.message);
+      }
+    })
   }
-=======
-//   //Need a model made of the User.
-// //  newUser: User = new User();
-//   constructor(private myUserService: UserService, private myRouter: Router) { }
 
-//   ngOnInit(): void {
-//   }
-// // signup() {
-// //   console.log(this.newUser);
-// // }
-// >>>>>>> frontend-dev
 }

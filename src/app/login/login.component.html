@@ -9,9 +9,9 @@
   
       <!-- Login Form -->
       <form (ngSubmit)="onSubmit()">
-        <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" [(ngModel)]="model.login">
+        <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" [(ngModel)]="model.username">
         <input type="text" id="password" class="fadeIn third" name="login" placeholder="password" [(ngModel)]="model.password">
-        <input type="submit" class="fadeIn fourth" value="Log In" routerLink="/profile">
+        <input type="submit" class="fadeIn fourth" value="Log In">
       </form>
   
       <!-- Create Account -->
