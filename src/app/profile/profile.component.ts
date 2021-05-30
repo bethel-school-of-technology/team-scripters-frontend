@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../models/signup';
 import { Router } from '@angular/router';
-import { Signup } from '../models/signup';
 import { UserService } from '../services/user.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { UserService } from '../services/user.service';
 })
 export class ProfileComponent implements OnInit {
 
-  currentUser: Signup = new Signup();
+  currentUser: User = new User();
 
   constructor(private myUserService: UserService, private myRouter: Router) { }
 

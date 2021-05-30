@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { User } from '../models/signup';
 import { Router } from '@angular/router';
-import { Signup } from '../models/signup';
 import { UserService } from '../services/user.service';
-
 
 @Component({
   selector: 'app-signup',
@@ -10,7 +10,8 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent implements OnInit {
-  model: Signup = new Signup();
+// <<<<<<< frontend-funct
+model: User = new User();
 
   constructor(private myUserService: UserService, private myRouter: Router) {}
 

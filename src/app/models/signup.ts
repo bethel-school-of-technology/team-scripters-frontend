@@ -1,9 +1,19 @@
-export class Signup {
+export class User {
 
+    id!: number;
     firstName: string;
     lastName: string;
     email: string;
+    username: string;
     password: string;
-    birthDate!: string;
     gender!: string;
+
+    constructor(){
+        this.firstName = "";
+        this.lastName = "";
+        this.email = "";
+        this.username = "";
+        this.password = "";
+        this.gender = "";
+    }
 }
