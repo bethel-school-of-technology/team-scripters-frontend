@@ -7,7 +7,7 @@
            <a *ngIf="!getToken()" routerLink="signup" routerLinkActive="active">signup</a>
        </button>
        <button>
-           <a  routerLink="profile" routerLinkActive="active">profile</a>
+           <a  *ngIf="getToken()" routerLink="profile" routerLinkActive="active">profile</a>
         </button>
        <button>
            <a (click)="logout()">Logout</a>
