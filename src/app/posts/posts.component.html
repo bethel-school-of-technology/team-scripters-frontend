@@ -1,1 +1,15 @@
-<p>posts works!</p>
+
+<!-- bringing in the child element through the event emmitter -->
+<app-edit-posts (onAddPost)="addPost($event)"></app-edit-posts>
+<!-- creating the layout for how a individual post will look -->
+  <div class="card" *ngFor="let post of posts">
+    <div class="card-header">
+      <!-- want to be able to grab the posters username and display above the post -->
+      UserName
+    </div>
+    <div class="card-block">
+      <p>{{post}}</p>
+      <button type="button" class="btn btn-outline-info mr-1" (click)="onUpdate()">Update</button>
+      <button type="button" class="btn btn-outline-danger mr-1" (click)="onDelete()">Delete</button>
+    </div>
+  </div>

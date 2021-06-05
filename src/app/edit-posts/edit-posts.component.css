@@ -1,0 +1,15 @@
+#textarea {
+    font-size : 1.5em;
+    padding: 1em;
+    resize: none;
+    width: auto;
+    min-height: 5em;
+    border-radius: 10%;
+    outline: none;
+}
+
+#cardbody {
+    border: none;
+    outline: none; 
+    margin: auto;
+}

@@ -1,1 +1,9 @@
-<p>edit-posts works!</p>
+<div class="card" id="cardbody" style="width: 18rem;">
+    <div class="card-body" >
+      <h5 class="card-title">Create Post</h5>
+      <textarea  type="text" id="textarea" class="card-text" placeholder="Type Message..." #newPost></textarea>
+      <button  class="btn btn-outline-primary" (click)="addNewPost(newPost.value)">Add</button>
+    </div>
+</div>
+
+<!-- [(ngModel)]="post.text" -->
