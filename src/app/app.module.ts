@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { PostsComponent } from './posts/posts.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { EditPostsComponent } from './edit-posts/edit-posts.component';
+import { AddPostComponent } from './add-post/add-post.component';
 
 @NgModule({
   declarations: [
@@ -23,13 +24,15 @@ import { EditPostsComponent } from './edit-posts/edit-posts.component';
     ProfileComponent,
     PostsComponent,
     EditProfileComponent,
-    EditPostsComponent
+    EditPostsComponent,
+    AddPostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

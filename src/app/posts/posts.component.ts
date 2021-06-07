@@ -1,7 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Router } from '@angular/router';
-import { Post } from '../models/post';
-import { PostService } from '../services/post.service'
+import { Component, OnInit } from '@angular/core';
+import { PostService } from '../services/post.service';
 
 @Component({
   selector: 'app-posts',
@@ -9,24 +7,26 @@ import { PostService } from '../services/post.service'
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
-  posts = [];
-  constructor(private myRouter: Router, private postService: PostService) { }
+
+  posts: any = [];
+
+  constructor(private postService: PostService) { }
 
   ngOnInit(): void {
+    this.postService.GetPosts().subscribe(res => {
+      console.log(res)
+      this.posts = res;
+    });
   }
 
-  //function to add a new post, needs functionality to connect to back end
-  addPost(newPost: string) {
-    this.posts.push(newPost);
-  }
-
-  //function to delete a post, needs functionality
-  onDelete(){
+  //function to delete a post, needs functionality testing
+  onDelete(id: any, i: any) {
     console.log("Deleted");
+    if (window.confirm('Do you want to go ahead?')) {
+      this.postService.deletePost(id).subscribe((res) => {
+        this.posts.splice(i, 1);
+      })
+    }
   }
 
-  //function to update a post, needs functionality
-  onUpdate(){
-    console.log("updated!");
-  }
 }

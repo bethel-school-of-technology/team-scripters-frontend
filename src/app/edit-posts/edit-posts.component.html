@@ -1,9 +1,19 @@
-<div class="card" id="cardbody" style="width: 18rem;">
-    <div class="card-body" >
-      <h5 class="card-title">Create Post</h5>
-      <textarea  type="text" id="textarea" class="card-text" placeholder="Type Message..." #newPost></textarea>
-      <button  class="btn btn-outline-primary" (click)="addNewPost(newPost.value)">Add</button>
-    </div>
-</div>
+<div class="row justify-content-center mt-5">
+  <div class="col-md-4">
+      <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+        <div class="form-group">
+          <label>Title</label>
+          <input class="form-control" type="text" formControlName="title">
+        </div>
 
-<!-- [(ngModel)]="post.text" -->
+        <div class="form-group">
+          <label>Body</label>
+          <input class="form-control" type="text" formControlName="body">
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-primary btn-block" type="submit">Update</button>
+        </div>
+      </form>
+  </div>
+</div>

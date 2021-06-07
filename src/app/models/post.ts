@@ -1,5 +1,7 @@
 export class Post {
     id?: number;
-    text: string;
+    title: string;
+    body: string;
     userName?: string;
+    published?: boolean;
 }
