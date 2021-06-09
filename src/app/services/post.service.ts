@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Post} from '../models/post';
+import {Post} from '../Shared/models/post';
 import { catchError, map } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
