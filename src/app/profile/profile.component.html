@@ -3,9 +3,9 @@
 		<div class="col-md-3">
 			<div class="profile-sidebar">
 				<!-- SIDEBAR USERPIC -->
-				<div class="profile-userpic">
-					<img src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg"
-						class="img-responsive" alt="">
+				<div class="profile-pic">
+					<img src="/assets/img/edward-cisneros-QSa-uv4WJ0k-unsplash-warRoom.jpg" class="img-responsive"
+						alt="people worshipping" style="width:100px;height:75px;">
 				</div>
 				<!-- END SIDEBAR USERPIC -->
 				<!-- SIDEBAR USER TITLE -->
@@ -25,12 +25,12 @@
 				<div class="userOptions">
 					<ul class="nav">
 						<li class="active">
-							<a href="#">
+							<a routerLink="/editPosts">
 								<i class="glyphicon glyphicon-edit"></i>
 								Create Posts</a>
 						</li>
 						<li>
-							<a href="#">
+							<a routerLink="/editProfile/:id">
 								<i class="glyphicon glyphicon-user"></i>
 								Profile Settings </a>
 						</li>
@@ -41,8 +41,17 @@
 		</div>
 		<div class="col-md-9">
 			<div class="profile-content">
-				<!-- Posts -->
+				<h2>My Posts</h2>
+				<!--
+					<app-posts *ngFor="let post of posts" [post]="currentuser.post"></app-posts>
+				
+				<div class="list-responsive">
+					<dl class="list list-bordered">
+						<dt *ngFor="let post of Posts; let i = index">{{post.currentUserName}}</dt>
+						<dd *ngFor="let post of Posts; let i = index">{{post.post}}</dd>
+					</dl>
+				</div>
+				-->
 			</div>
 		</div>
 	</div>
-</div>
