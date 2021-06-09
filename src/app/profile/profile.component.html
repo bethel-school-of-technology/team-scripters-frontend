@@ -25,8 +25,8 @@
 				<div class="userOptions">
 					<ul class="nav">
 						<li class="active">
-							<a routerLink="/editPosts">
-								<i class="glyphicon glyphicon-edit"></i>
+							<a href="#" routerLink="/addPost">
+								<i class="glyphicon glyphicon-edit" ></i>
 								Create Posts</a>
 						</li>
 						<li>
@@ -41,17 +41,9 @@
 		</div>
 		<div class="col-md-9">
 			<div class="profile-content">
-				<h2>My Posts</h2>
-				<!--
-					<app-posts *ngFor="let post of posts" [post]="currentuser.post"></app-posts>
-				
-				<div class="list-responsive">
-					<dl class="list list-bordered">
-						<dt *ngFor="let post of Posts; let i = index">{{post.currentUserName}}</dt>
-						<dd *ngFor="let post of Posts; let i = index">{{post.post}}</dd>
-					</dl>
-				</div>
-				-->
+				<!-- Posts -->
+		<!-- brought in the app-posts selector to display the HTML at this point -->
+				<app-posts></app-posts>
 			</div>
 		</div>
 	</div>

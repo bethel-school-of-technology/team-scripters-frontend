@@ -1,0 +1,19 @@
+<div class="row justify-content-center mt-5">
+    <div class="col-md-4">
+        <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label>Title</label>
+            <input class="form-control" type="text" formControlName="title">
+          </div>
+  
+          <div class="form-group">
+            <label>Body</label>
+            <input class="form-control" type="text" formControlName="body">
+          </div>
+  
+          <div class="form-group">
+            <button class="btn btn-primary btn-block" type="submit">Post</button>
+          </div>
+        </form>
+    </div>
+  </div>

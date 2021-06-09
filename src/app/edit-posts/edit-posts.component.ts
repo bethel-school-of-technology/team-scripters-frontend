@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { PostService } from '../services/post.service';
+import { FormGroup, FormBuilder } from '@angular/forms';
+
 
 @Component({
   selector: 'app-edit-posts',
@@ -7,9 +11,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditPostsComponent implements OnInit {
 
-  constructor() { }
+    getId: any;
+    updateForm: FormGroup;
 
-  ngOnInit(): void {
+  constructor(
+    public formBuilder: FormBuilder,
+    private router: Router,
+    private ngZone: NgZone,
+    private activatedRoute: ActivatedRoute,
+    private postService: PostService
+  ) { 
+    this.getId = this.activatedRoute.snapshot.paramMap.get('id');
+
+    this.postService.GetPost(this.getId).subscribe(res => {
+      this.updateForm.setValue({
+        title: res['title'],
+        body: ['body']
+      });
+    });
+    this.updateForm = this.formBuilder.group({
+      title: [''],
+      body: ['']
+    })
+  }
+
+  ngOnInit(): void {}
+
+  onUpdate(): any {
+    console.log(this.updateForm.value);
+    this.postService.updatePost(this.getId, this.updateForm.value)
+    .subscribe(() => {
+        console.log('Data updated successfully!')
+        this.ngZone.run(() => this.router.navigateByUrl('/posts'))
+      }, (err) => {
+        console.log(err);
+    });
   }
 
 }

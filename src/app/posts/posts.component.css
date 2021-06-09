@@ -1,0 +1,15 @@
+button {
+    margin: .5em;
+    float: right;
+}
+p {
+    padding: 1em;
+}
+
+.card-header{
+    background-color: darkgrey;
+}
+.card{
+    margin-top: 2em;    
+    width: 500px;
+}

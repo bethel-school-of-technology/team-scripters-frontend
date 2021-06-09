@@ -8,6 +8,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { PostsComponent } from './posts/posts.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { EditPostsComponent } from './edit-posts/edit-posts.component';
+import { AddPostComponent } from './add-post/add-post.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'posts' },
@@ -16,7 +17,9 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'posts', component: PostsComponent },
   { path: 'editProfile/:id', component: EditProfileComponent },
-  { path: 'editPosts', component: EditPostsComponent },
+  { path: 'editPosts/:id', component: EditPostsComponent},
+  { path: 'addPost', component: AddPostComponent},
+  
 ];
 
 @NgModule({
