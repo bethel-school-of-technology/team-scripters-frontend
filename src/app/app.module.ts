@@ -6,14 +6,14 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavComponent } from './nav/nav.component';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
-import { ProfileComponent } from './profile/profile.component';
-import { PostsComponent } from './posts/posts.component';
-import { EditProfileComponent } from './edit-profile/edit-profile.component';
-import { EditPostsComponent } from './edit-posts/edit-posts.component';
-import { AddPostComponent } from './add-post/add-post.component';
+import { NavComponent } from './Shared/Components/nav/nav.component';
+import { LoginComponent } from './Components/User/login/login.component';
+import { SignupComponent } from './Components/User/signup/signup.component';
+import { ProfileComponent } from './Components/User/profile/profile.component';
+import { PostsComponent } from './Components/posts/posts/posts.component';
+import { EditProfileComponent } from './Components/User/edit-profile/edit-profile.component';
+import { EditPostsComponent } from './Components/posts/edit-posts/edit-posts.component';
+import { AddPostComponent } from './Components/posts/add-post/add-post.component';
 
 @NgModule({
   declarations: [

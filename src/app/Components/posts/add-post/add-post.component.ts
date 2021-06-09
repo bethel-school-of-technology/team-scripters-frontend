@@ -1,6 +1,6 @@
 import { Component, NgZone, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PostService } from '../services/post.service';
+import { PostService } from '../../../services/post.service';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
