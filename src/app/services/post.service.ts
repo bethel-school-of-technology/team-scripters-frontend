@@ -10,7 +10,7 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 export class PostService {
 
   //Do we need new routes for the posts? Node/Express API
-  serverUserURL: string = "http://localhost:5000/api/post";
+  serverUserURL: string = "http://localhost:5000/api/posts";
 
   // Http Header
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
@@ -19,7 +19,7 @@ export class PostService {
 
  // Add
  AddPost(data: Post): Observable<any> {
-  let serverUserURL = `${this.serverUserURL}/add-post`;
+  let serverUserURL = `${this.serverUserURL}/posts`;
   return this.http.post(serverUserURL, data)
     .pipe(
       catchError(this.handleError)
@@ -28,7 +28,7 @@ export class PostService {
 
 // Get all the posts
 GetPosts() {
-  return this.http.get(`${this.serverUserURL}`);
+  return this.http.get(`${this.serverUserURL}/posts`);
 }
 
 // Get single object

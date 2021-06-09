@@ -6,7 +6,7 @@
     </div>
     <div class="card-block">
       <p>{{post.body}}</p>
-      <button type="button" class="btn btn-outline-info mr-1" routerLink="/edit-post/{{post._id}}">Edit</button>
+      <button type="button" class="btn btn-outline-info mr-1" routerLink="/editPosts/{{post._id}}">Edit</button>
       <button type="button" class="btn btn-outline-danger mr-1" (click)="onDelete(post._id, i)">Delete</button>
     </div>
   </div>

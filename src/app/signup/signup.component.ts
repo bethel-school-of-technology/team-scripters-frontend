@@ -18,7 +18,7 @@ model: User = new User();
   ngOnInit(): void {}
 
   onSubmit() {
-    // console.log('Successful signup', this.model);
+    console.log('Successful signup', this.model);
     this.myUserService.registerUser(this.model).subscribe(myResponseObject => {
       console.log(myResponseObject);
       if(myResponseObject.status === 200){

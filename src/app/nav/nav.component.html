@@ -1,4 +1,28 @@
-<p>WarRoom</p>
+<nav class="navbar navbar-expand-sm   navbar-light bg-light">
+
+    <div>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="!getToken()" routerLink="login" routerLinkActive="active">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" *ngIf="!getToken()" routerLink="signup" routerLinkActive="active">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="posts" routerLinkActive="active">All Posts</a>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="profile" routerLinkActive="active" >Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="logout()">Logout</a>
+      </li>
+      </ul>
+    </div>
+  </nav>
+
+
+<!-- <p>WarRoom</p>
 <nav>
        <button>
            <a *ngIf="!getToken()" routerLink="login" routerLinkActive="active">login</a>
@@ -7,13 +31,13 @@
            <a *ngIf="!getToken()" routerLink="signup" routerLinkActive="active">signup</a>
        </button>
        <button>
-           <a  *ngIf="getToken()" routerLink="profile" routerLinkActive="active">profile</a>
+           <a routerLink="profile" routerLinkActive="active">profile</a>
         </button>
        <button>
            <a (click)="logout()">Logout</a>
         </button>
 
-</nav>
+</nav> -->
 <!-- Add to the profile button to hide when not logged in 
  *ngIf="getToken()" 
  *ngIf="getToken()" -->
