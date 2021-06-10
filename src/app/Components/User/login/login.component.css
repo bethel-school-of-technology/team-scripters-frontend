@@ -1,7 +1,7 @@
 /* BASIC */
 
 html {
-    background-color: #56baed;
+    background-color: #eaf23f;
   }
   
   body {
@@ -10,7 +10,7 @@ html {
   }
   
   a {
-    color: #92badd;
+    color: #084887;
     display:inline-block;
     text-decoration: none;
     font-weight: 400;
@@ -43,7 +43,7 @@ html {
   #formContent {
     -webkit-border-radius: 10px 10px 10px 10px;
     border-radius: 10px 10px 10px 10px;
-    background: #fff;
+    background: #eaf2ef;
     padding: 30px;
     width: 90%;
     max-width: 450px;
@@ -55,7 +55,7 @@ html {
   }
   
   #formFooter {
-    background-color: #f6f6f6;
+    background-color: #f8f9fa;
     border-top: 1px solid #dce8f1;
     padding: 25px;
     text-align: center;
@@ -81,7 +81,7 @@ html {
   /* FORM TYPOGRAPHY*/
   
   input[type=button], input[type=submit], input[type=reset]  {
-    background-color: #56baed;
+    background-color: #084887;
     border: none;
     color: white;
     padding: 15px 80px;
@@ -115,7 +115,7 @@ html {
   }
   
   input[type=text] {
-    background-color: #f6f6f6;
+    background-color: #f8f9fa;
     border: none;
     color: #0d0d0d;
     padding: 15px 32px;
@@ -125,23 +125,23 @@ html {
     font-size: 16px;
     margin: 5px;
     width: 85%;
-    border: 2px solid #f6f6f6;
+    border: 2px solid #f8f9fa;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-    -webkit-border-radius: 5px 5px 5px 5px;
-    border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
   }
   
   input[type=text]:focus {
     background-color: #fff;
-    border-bottom: 2px solid #5fbae9;
+    border-bottom: 2px solid #084887;
   }
   
   input[type=text]:placeholder {
-    color: #cccccc;
+    color: #f8f9fa;
   }
   
   
@@ -235,7 +235,7 @@ html {
     bottom: -10px;
     width: 0;
     height: 2px;
-    background-color: #56baed;
+    background-color: #084887;
     content: "";
     transition: width 0.2s;
   }
