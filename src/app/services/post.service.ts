@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Post} from '../models/post';
+import {Post} from '../Shared/models/post';
 import { catchError, map } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
@@ -19,7 +19,7 @@ export class PostService {
 
  // Add
  AddPost(data: Post): Observable<any> {
-  let serverUserURL = `${this.serverUserURL}/posts`;
+  let serverUserURL = `${this.serverUserURL}/add-post`;
   return this.http.post(serverUserURL, data)
     .pipe(
       catchError(this.handleError)
@@ -28,7 +28,7 @@ export class PostService {
 
 // Get all the posts
 GetPosts() {
-  return this.http.get(`${this.serverUserURL}/posts`);
+  return this.http.get(`${this.serverUserURL}`);
 }
 
 // Get single object

@@ -1,46 +1,4 @@
-<div class="wrapper fadeInDown">
-    <div id="formContent">
-      <!-- Tabs Titles -->
-  
-      <!-- Icon -->
-      <div class="fadeIn first">
-        <h3>WarRoom</h3>
-      </div>
-  
-      <!-- Login Form -->
-      <form (ngSubmit)="onSubmit()">
-        <input type="text" id="firstName" class="fadeIn second" name="firstName" placeholder="First Name" [(ngModel)]="model.firstName">
-        <input type="text" id="lastName" class="fadeIn third" name="signup" placeholder="Last Name" [(ngModel)]="model.lastName">
-        <input type="text" id="email" class="fadeIn third" name="signup" placeholder="Email" [(ngModel)]="model.email">
-        <input type="text" id="username" class="fadeIn third" name="signup" placeholder="Username" [(ngModel)]="model.username">
-        <!-- <input type="text" id="password" class="fadeIn third" name="signup" placeholder="Password" [(ngModel)]="model.password"> -->
-        <input type="password" id="password" class="fadeIn third" name="signup" placeholder="Password" [(ngModel)]="model.password">
-        <div class="custom-control custom-radio fadeIn fourth">
-            <label>Gender:  </label>
-            <label class="radio-inline">
-                <input type="radio" id="male" value="M" class="custom-control-input" name="gender" [(ngModel)]="model.gender"/> Male
-            </label>
-            <label class="radio-inline">
-                <input type="radio" id="female" value="F" class="custom-control-input" name="gender" [(ngModel)]="model.gender"/> Female
-            </label>
-        </div>
-        <input type="submit" class="fadeIn fourth" value="Submit Info">
-      </form>
-
-  
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-<!-- Testing different layout for signup page -->
-<!-- <div class="container" id="wrap">
+ <div class="container" id="wrap">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
             <form #signUpForm="ngForm" class="form" role="form" (ngSubmit)="onSubmit()" action="r" method="post" accept-charset="utf-8">
@@ -62,7 +20,7 @@
                     [(ngModel)]="model.password" /> -->
 
                 <!-- Passwords are typed synchronously on the page (fix?) -->
-                <!-- <input type="password" name="confirm_password" value="" class="form-control input-lg"
+                <input type="password" name="confirm_password" value="" class="form-control input-lg"
                     placeholder="Confirm Password" [(ngModel)]="model.password" />
 
                 <div class="custom-control custom-radio">
@@ -82,4 +40,4 @@
             </form>
         </div>
     </div>
-</div> -->
+</div>
