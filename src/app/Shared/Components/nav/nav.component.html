@@ -1,12 +1,53 @@
+<<<<<<< HEAD
+<nav class="navbar navbar-expand-sm   navbar-light bg-light">
+
+    <div>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="!getToken()" routerLink="login" routerLinkActive="active">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" *ngIf="!getToken()" routerLink="signup" routerLinkActive="active">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="posts" routerLinkActive="active">All Posts</a>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="profile" routerLinkActive="active" >Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="logout()">Logout</a>
+      </li>
+      </ul>
+    </div>
+  </nav>
+
+
+<!-- <p>WarRoom</p>
+<nav>
+       <button>
+           <a *ngIf="!getToken()" routerLink="login" routerLinkActive="active">login</a>
+       </button> 
+       <button>
+           <a *ngIf="!getToken()" routerLink="signup" routerLinkActive="active">signup</a>
+       </button>
+       <button>
+           <a routerLink="profile" routerLinkActive="active">profile</a>
+=======
 <div class="container">
     <h1>WarRoom</h1>
     <nav class="align-right">
         <button>
             <a *ngIf="!getToken()" routerLink="login" routerLinkActive="active">login</a>
+>>>>>>> aadd6c4205f82921e6a7d541d6dbcb04ce290d2d
         </button>
         <button>
             <a *ngIf="!getToken()" routerLink="signup" routerLinkActive="active">signup</a>
         </button>
+<<<<<<< HEAD
+
+</nav> -->
+=======
         <button>
             <a routerLink="profile" routerLinkActive="active">profile</a>
         </button>
@@ -15,6 +56,7 @@
         </button>
     </nav>
 </div>
+>>>>>>> aadd6c4205f82921e6a7d541d6dbcb04ce290d2d
 <!-- Add to the profile button to hide when not logged in 
  *ngIf="getToken()" 
  *ngIf="getToken()" -->

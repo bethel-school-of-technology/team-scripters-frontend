@@ -25,12 +25,20 @@
 				<div class="userOptions">
 					<ul class="nav">
 						<li class="active">
-							<a href="#" routerLink="/addPost">
-								Create Posts</a>
+							<!-- <a href="#" routerLink="/addPost">
+								<i class="glyphicon glyphicon-edit" ></i>
+								Create Posts</a> --> <a (click)="triggerModal(postModal)">Create Post</a>
+								<ng-template #postModal let-modal>
+								<app-add-post (postSubmitted)="closeModal()"></app-add-post>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-danger" (click)="modal.close('Save click')">Close</button>
+								  </div>
+								</ng-template>
 						</li>
 						<li>
 							<a href="#">
-								Profile Settings </a>
+								<i class="glyphicon glyphicon-user"></i>
+							Profile Settings </a>
 						</li>
 					</ul>
 				</div>

@@ -1,18 +1,18 @@
 <div class="row justify-content-center mt-5">
-    <div class="col-md-4">
-        <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
-          <div class="form-group">
+    <div class="col-md-6 shadow-sm p-3 mb-5 bg-white rounded">
+        <form [formGroup]="postForm" (ngSubmit)="onSubmit(content)">
+          <div class="form-group ">
             <label>Title</label>
-            <input class="form-control" type="text" formControlName="title">
+            <input class="form-control" type="text" formControlName="title" placeholder="Title">
           </div>
   
           <div class="form-group">
             <label>Body</label>
-            <input class="form-control" type="text" formControlName="body">
+            <textarea class="form-control" type="text" row="3" formControlName="body" placeholder="Type Here..."></textarea>
           </div>
-  
+          <br>
           <div class="form-group">
-            <button class="btn btn-primary btn-block" type="submit">Post</button>
+            <button class="btn btn-primary btn-block float-end" type="submit">Post</button>
           </div>
         </form>
     </div>

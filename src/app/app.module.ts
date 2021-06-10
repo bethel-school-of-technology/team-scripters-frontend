@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './Shared/Components/nav/nav.component';
@@ -25,14 +25,15 @@ import { AddPostComponent } from './Components/posts/add-post/add-post.component
     PostsComponent,
     EditProfileComponent,
     EditPostsComponent,
-    AddPostComponent
+    AddPostComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

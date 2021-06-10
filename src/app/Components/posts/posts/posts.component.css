@@ -1,4 +1,4 @@
-button {
+#button {
     margin: .5em;
     float: right;
 }
@@ -7,9 +7,12 @@ p {
 }
 
 .card-header{
-    background-color: darkgrey;
+    background-color: rgb(226, 225, 225);
+    font-size: large;
+    font-weight: bolder;
 }
 .card{
     margin-top: 2em;    
     width: 500px;
+    border-radius: 6px;
 }
