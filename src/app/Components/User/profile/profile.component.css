@@ -18,6 +18,8 @@
   background-image: linear-gradient(to bottom, #eaf2ef 0%, #d9e8e2 100%);
   background-repeat: no-repeat;
   background-attachment: fixed;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
   border-radius: 6px;
 }
 
@@ -122,4 +124,27 @@
   padding: 20px;
   min-height: 460px;
   align-content: center;
+}
+
+.profile-content {
+  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  --scrollbarBG: #d9e8e2;
+  --thumbBG: #b7c2cc;
+  scrollbar-width: 10px;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+.profile-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.profile-content::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+.profile-content::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
 }
