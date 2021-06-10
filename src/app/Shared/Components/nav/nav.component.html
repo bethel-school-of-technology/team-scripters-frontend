@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <nav class="navbar navbar-expand-sm   navbar-light bg-light">
 
     <div>
@@ -32,12 +33,30 @@
        </button>
        <button>
            <a routerLink="profile" routerLinkActive="active">profile</a>
+=======
+<div class="container">
+    <h1>WarRoom</h1>
+    <nav class="align-right">
+        <button>
+            <a *ngIf="!getToken()" routerLink="login" routerLinkActive="active">login</a>
+>>>>>>> aadd6c4205f82921e6a7d541d6dbcb04ce290d2d
         </button>
-       <button>
-           <a (click)="logout()">Logout</a>
+        <button>
+            <a *ngIf="!getToken()" routerLink="signup" routerLinkActive="active">signup</a>
         </button>
+<<<<<<< HEAD
 
 </nav> -->
+=======
+        <button>
+            <a routerLink="profile" routerLinkActive="active">profile</a>
+        </button>
+        <button>
+            <a (click)="logout()">Logout</a>
+        </button>
+    </nav>
+</div>
+>>>>>>> aadd6c4205f82921e6a7d541d6dbcb04ce290d2d
 <!-- Add to the profile button to hide when not logged in 
  *ngIf="getToken()" 
  *ngIf="getToken()" -->
