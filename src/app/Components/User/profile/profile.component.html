@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id="wrap">
 	<div class="row profile">
 		<div class="col-md-3">
 			<div class="profile-sidebar">
@@ -25,14 +25,20 @@
 				<div class="userOptions">
 					<ul class="nav">
 						<li class="active">
-							<a href="#" routerLink="/addPost">
+							<!-- <a href="#" routerLink="/addPost">
 								<i class="glyphicon glyphicon-edit" ></i>
-								Create Posts</a>
+								Create Posts</a> --> <a (click)="triggerModal(postModal)">Create Post</a>
+								<ng-template #postModal let-modal>
+								<app-add-post (postSubmitted)="closeModal()"></app-add-post>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-danger" (click)="modal.close('Save click')">Close</button>
+								  </div>
+								</ng-template>
 						</li>
 						<li>
 							<a routerLink="/editProfile/:id">
 								<i class="glyphicon glyphicon-user"></i>
-								Profile Settings </a>
+							Profile Settings </a>
 						</li>
 					</ul>
 				</div>
@@ -42,7 +48,7 @@
 		<div class="col-md-9">
 			<div class="profile-content">
 				<!-- Posts -->
-		<!-- brought in the app-posts selector to display the HTML at this point -->
+				<!-- brought in the app-posts selector to display the HTML at this point -->
 				<app-posts></app-posts>
 			</div>
 		</div>

@@ -1,0 +1,78 @@
+#wrap {
+  background-image: -ms-linear-gradient(top, #eaf2ef 0%, #d9e8e2 100%);
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(top, #eaf2ef 0%, #d9e8e2 100%);
+  /* Opera */
+  background-image: -o-linear-gradient(top, #eaf2ef 0%, #d9e8e2 100%);
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, #eaf2ef),
+    color-stop(1, #d9e8e2)
+  );
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(top, #eaf2ef 0%, #d9e8e2 100%);
+  /* W3C Markup, IE10 Release Preview */
+  background-image: linear-gradient(to bottom, #eaf2ef 0%, #d9e8e2 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+}
+legend {
+  color: #141823;
+  font-size: 25px;
+  font-weight: bold;
+}
+.signup-btn {
+  background: #084887;
+  background-image: -webkit-linear-gradient(top, #084887, #2b8ff3);
+  background-image: -moz-linear-gradient(top, #084887, #2b8ff3);
+  background-image: -ms-linear-gradient(top, #084887, #2b8ff3);
+  background-image: -o-linear-gradient(top, #084887, #2b8ff3);
+  background-image: linear-gradient(to bottom, #084887, #2b8ff3);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  text-shadow: 0px 1px 0px #898a88;
+  -webkit-box-shadow: 0px 0px 0px #0b66c1;
+  -moz-box-shadow: 0px 0px 0px #0b66c1;
+  box-shadow: 0px 0px 0px #0b66c1;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border: solid #063360 1px;
+  text-decoration: none;
+}
+
+.signup-btn:hover {
+  background: #084887;
+  background-image: -webkit-linear-gradient(top, #084887, #2e5b88);
+  background-image: -moz-linear-gradient(top, #084887, #2e5b88);
+  background-image: -ms-linear-gradient(top, #084887, #2e5b88);
+  background-image: -o-linear-gradient(top, #084887, #2e5b88);
+  background-image: linear-gradient(to bottom, #084887, #2e5b88);
+  text-decoration: none;
+}
+.navbar-default .navbar-brand {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+}
+.form .form-control {
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  #home {
+    margin-top: 50px;
+  }
+  #home .slogan {
+    color: #0e385f;
+    line-height: 29px;
+    font-weight: bold;
+  }
+}

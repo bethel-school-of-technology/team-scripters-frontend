@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Post} from '../models/post';
+import {Post} from '../Shared/models/post';
 import { catchError, map } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
@@ -10,7 +10,7 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 export class PostService {
 
   //Do we need new routes for the posts? Node/Express API
-  serverUserURL: string = "http://localhost:5000/api/post";
+  serverUserURL: string = "http://localhost:5000/api/posts";
 
   // Http Header
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
