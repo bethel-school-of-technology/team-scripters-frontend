@@ -57,8 +57,8 @@ export class UserService {
   updateUserProfile(id: any, data: any): Observable<any> {
     let userInfo = {
       id,
-      data,
+      data
     };
-    return this.myHttp.put(this.serverUserURL + '/editProfile/:id', userInfo);
+    return this.myHttp.put(this.serverUserURL + '/edit-profile', userInfo);
   }
 }

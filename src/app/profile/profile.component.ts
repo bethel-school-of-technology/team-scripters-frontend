@@ -14,7 +14,7 @@ export class ProfileComponent implements OnInit {
   constructor(private myUserService: UserService, private myRouter: Router) {}
 
   ngOnInit(): void {
-    if (localStorage.getItem('myAppToken')) {
+    if (!localStorage.getItem('myAppToken')) {
       window.alert('You Are NOT Logged In');
       this.myRouter.navigate(['/login']);
     } else {

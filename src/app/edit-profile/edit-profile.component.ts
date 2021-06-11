@@ -16,7 +16,7 @@ export class EditProfileComponent implements OnInit {
     lastName: new FormControl(''),
     email: new FormControl(''),
     username: new FormControl(''),
-    password: new FormControl(''),
+    //password: new FormControl(''),
   });
 
   currentUser: User = new User();
@@ -27,30 +27,33 @@ export class EditProfileComponent implements OnInit {
     private myRouter: Router,
     private activatedRoute: ActivatedRoute
   ) {
-    this.getId = this.activatedRoute.snapshot.paramMap.get('id');
+    // this.getId = this.activatedRoute.snapshot.paramMap.get('id');
 
     this.myUserService.getUserProfile().subscribe((res) => {
       console.log(res)
-      // this.updateForm.setValue({
-        // firstName: res[''],
-        // lastName: res[''],
-        // email: res[''],
-        // username: res[''],
-        // password: res[''],
-      // });
+       this.updateForm.setValue({
+        firstName: res.user.firstName,
+        lastName: res.user.lastName,
+        email: res.user.email,
+        username: res.user.username,
+       });
+       this.getId=res.user._id
+       this.currentUser.firstName = res.user.firstName
+       this.currentUser.lastName = res.user.lastName
+       this.currentUser.email = res.user.email
+       this.currentUser.username = res.user.username
     });
   }
 
   ngOnInit(): void {}
 
   onUpdate(): any {
-    // this.myUserService
-      // .updateUserProfile(this.getId, this.updateForm.value)
-      // .subscribe({
-        // next: () => {
-        // this.myRouter.navigate(['/profile', { relativeTo: this.route }]);
-        // },
-      // });
+     this.myUserService
+      .updateUserProfile(this.getId, this.updateForm.value)
+      .subscribe(res => {
+        this.myRouter.navigate(['/profile']);
+        },
+      );
 
 
     console.log('Successful update', this.updateForm.value);
