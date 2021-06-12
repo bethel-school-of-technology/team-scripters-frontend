@@ -25,14 +25,14 @@
 				<div class="userOptions">
 					<ul class="nav">
 						<li class="active">
-							<!-- <a href="#" routerLink="/addPost">
-								<i class="glyphicon glyphicon-edit" ></i>
-								Create Posts</a> --> <a (click)="triggerModal(postModal)">Create Post</a>
-								<ng-template #postModal let-modal>
-								<app-add-post (postSubmitted)="closeModal()"></app-add-post>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-danger" (click)="modal.close('Save click')">Close</button>
-								  </div>
+							<!-- modal popup window to add a new post -->
+							 <a (click)="triggerModal(postModal)">Create Post</a>
+								<ng-template #postModal let-modal >
+									<app-add-post id="modal" (postSubmitted)="closeModal()">
+										<div class="modal-footer">
+											<button type="button" class="btn btn-danger" (click)="modal.close('Save click')">Close</button>
+										  </div>
+									</app-add-post>
 								</ng-template>
 						</li>
 						<li>
@@ -46,7 +46,7 @@
 			</div>
 		</div>
 		<div class="col-md-9">
-			<div class="profile-content">
+			<div class="profile-content d-flex justify-content-center">
 				<!-- Posts -->
 				<!-- brought in the app-posts selector to display the HTML at this point -->
 				<app-posts></app-posts>

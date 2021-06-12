@@ -1,0 +1,16 @@
+.wrapper {
+    background-image: linear-gradient(#EAF2EF, #cde7de);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+textarea{
+    height: 20em;
+    width: 100%;
+    margin-bottom: 1em;
+    border-radius: 6px;
+}
+
+input {
+    margin-bottom: 1em;
+    border-radius: 6px;
+}

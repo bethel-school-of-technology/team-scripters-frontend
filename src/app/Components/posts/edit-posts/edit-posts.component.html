@@ -1,19 +1,19 @@
-<div class="row justify-content-center mt-5">
-  <div class="col-md-4">
-      <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
-        <div class="form-group">
-          <label>Title</label>
-          <input class="form-control" type="text" formControlName="title">
-        </div>
-
-        <div class="form-group">
-          <label>Body</label>
-          <input class="form-control" type="text" formControlName="body">
-        </div>
-
-        <div class="form-group">
-          <button class="btn btn-primary btn-block" type="submit">Update</button>
-        </div>
-      </form>
+  <div class="wrapper d-flex row justify-content-center mx-auto mt-5 col-md-9">
+    <div class="col-md-4">
+        <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+          <div class="form-group">
+            <label><h3>Title</h3></label>
+            <input class="form-control" type="text" formControlName="title">
+          </div>
+  
+          <div class="form-group">
+            <label><h3>Body</h3></label>
+            <textarea class="form-control" type="text" formControlName="body"></textarea>
+          </div>
+  
+          <div class="form-group">
+            <button class="btn btn-primary btn-block float-end" type="submit">Update</button>
+          </div>
+        </form>
+    </div>
   </div>
-</div>

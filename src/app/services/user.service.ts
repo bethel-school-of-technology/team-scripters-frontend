@@ -29,9 +29,9 @@ export class UserService {
   loginUser(username: string, password: string): Observable<any> {
     let loginInfo = {
       username,
-      password,
-    };
-    return this.myHttp.post(this.serverUserURL + '/login', loginInfo);
+      password
+    }
+    return this.myHttp.post(this.serverUserURL + "/login", loginInfo);
   }
 
   //Function to make a server request to /api/users/profile route

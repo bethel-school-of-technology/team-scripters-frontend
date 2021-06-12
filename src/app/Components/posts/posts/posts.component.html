@@ -1,23 +1,25 @@
-<!-- creating the layout for how a individual post will look -->
-  <div id="card" class="card" *ngFor="let post of posts; let i = index">
-    <div class="card-header d-flex align-items-center justify-content-between">
-        {{post.title.toUpperCase()}}
-      <!-- want to be able to grab the posters username and display above the post -->
-      <div class="row" id="button">
-        <div class="col">
-          <div ngbDropdown class="d-inline-block">
-            <button class="btn btn-sm" id="dropdownBasic1" ngbDropdownToggle>...</button>
-            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <button ngbDropdownItem routerLink="/editPosts/{{post._id}}">Edit</button>
-              <button ngbDropdownItem (click)="onDelete(post._id, i)">Delete</button>
+<div class="container" id="wrap">
+  <!-- creating the layout for how a individual post will look -->
+    <div id="card" class="card" *ngFor="let post of posts; let i = index">
+      <div class="card-header d-flex align-items-center justify-content-between">
+          {{post.title.toUpperCase()}}
+        <!-- want to be able to grab the posters username and display above the post -->
+        <div class="row" id="button">
+          <div class="col">
+            <div ngbDropdown class="d-inline-block" *ngIf="getToken()">
+              <button class="btn btn-sm" id="dropdownBasic1" ngbDropdownToggle>...</button>
+              <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="drop">
+                <button ngbDropdownItem routerLink="/editPosts/{{post._id}}">Edit</button>
+                <button ngbDropdownItem (click)="onDelete(post._id, i)">Delete</button>
+              </div>
             </div>
           </div>
-        </div>
+      </div>
+      </div>
+      <div class="card-block">
+        <p>{{post.body}}</p>
+        <!-- <button type="button" class="btn btn-outline-info mr-1" routerLink="/editPosts/{{post._id}}">Edit</button>
+        <button type="button" class="btn btn-outline-danger mr-1" (click)="onDelete(post._id, i)">Delete</button> -->
+        
     </div>
-    </div>
-    <div class="card-block">
-      <p>{{post.body}}</p>
-      <!-- <button type="button" class="btn btn-outline-info mr-1" routerLink="/editPosts/{{post._id}}">Edit</button>
-      <button type="button" class="btn btn-outline-danger mr-1" (click)="onDelete(post._id, i)">Delete</button> -->
-      
-  </div>
+</div>

@@ -26,7 +26,7 @@ export class EditPostsComponent implements OnInit {
     this.postService.GetPost(this.getId).subscribe(res => {
       this.updateForm.setValue({
         title: res['title'],
-        body: ['body']
+        body: res['body']
       });
     });
     this.updateForm = this.formBuilder.group({
@@ -37,12 +37,13 @@ export class EditPostsComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  //Submits the edits to the database and returns you to the profile page
   onUpdate(): any {
     console.log(this.updateForm.value);
     this.postService.updatePost(this.getId, this.updateForm.value)
     .subscribe(() => {
         console.log('Data updated successfully!')
-        this.ngZone.run(() => this.router.navigateByUrl('/posts'))
+        this.ngZone.run(() => this.router.navigateByUrl('/profile'))
       }, (err) => {
         console.log(err);
     });
