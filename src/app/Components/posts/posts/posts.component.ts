@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { PostService } from '../../../services/post.service';
 
 @Component({
@@ -13,6 +14,7 @@ export class PostsComponent implements OnInit {
   constructor(private postService: PostService) { }
 
   ngOnInit(): void {
+    //on page load grab the posts from the database
     this.postService.GetPosts().subscribe(res => {
       console.log(res)
       this.posts = res;
@@ -28,5 +30,10 @@ export class PostsComponent implements OnInit {
       })
     }
   }
+  
+  //Check if user is logged in in order to make edits/delete posts
+  getToken(){
+    return localStorage.getItem("myAppToken");
+}
 
 }
