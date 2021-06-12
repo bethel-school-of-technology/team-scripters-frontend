@@ -8,6 +8,7 @@ import { PostsComponent } from './Components/posts/posts/posts.component';
 import { EditProfileComponent } from './Components/User/edit-profile/edit-profile.component';
 import { EditPostsComponent } from './Components/posts/edit-posts/edit-posts.component';
 import { AddPostComponent } from './Components/posts/add-post/add-post.component';
+import { UpdatePasswordComponent } from './Components/User/update-password/update-password.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'posts' },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'editProfile/:id', component: EditProfileComponent },
   { path: 'editPosts/:id', component: EditPostsComponent},
   { path: 'addPost', component: AddPostComponent},
+  { path: 'edit-password', component: UpdatePasswordComponent},
   
 ];
 

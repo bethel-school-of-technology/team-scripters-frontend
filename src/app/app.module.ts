@@ -14,6 +14,7 @@ import { PostsComponent } from './Components/posts/posts/posts.component';
 import { EditProfileComponent } from './Components/User/edit-profile/edit-profile.component';
 import { EditPostsComponent } from './Components/posts/edit-posts/edit-posts.component';
 import { AddPostComponent } from './Components/posts/add-post/add-post.component';
+import { UpdatePasswordComponent } from './Components/User/update-password/update-password.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { AddPostComponent } from './Components/posts/add-post/add-post.component
     EditProfileComponent,
     EditPostsComponent,
     AddPostComponent,
+    UpdatePasswordComponent,
   ],
   imports: [
     BrowserModule,

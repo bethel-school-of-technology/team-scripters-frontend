@@ -15,9 +15,7 @@ export class UserService {
 
   //Function to make a server request to /api/users/register route
   //Type of request: POST
-
   //Change 'any' to the user model when available
-
   registerUser(newUser: User): Observable<any> {
     return this.myHttp.post(this.serverUserURL + '/signup', newUser);
   }
@@ -59,4 +57,15 @@ export class UserService {
     };
     return this.myHttp.put(this.serverUserURL + '/edit-profile', userInfo);
   }
+
+  changePassword(data){
+    var headers = new HttpHeaders()
+      .set('Authorization', 'Token ' + localStorage.getItem('usertoken'));
+  
+    var options =  {
+        headers: headers
+    };
+    return this.myHttp.put(this.serverUserURL + '/edit-password',data, options)
+  }
+
 }
