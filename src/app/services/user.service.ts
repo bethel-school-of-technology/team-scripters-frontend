@@ -19,7 +19,7 @@ export class UserService {
   //Change 'any' to the user model when available
 
   registerUser(newUser: User): Observable<any> {
-    return this.myHttp.post(this.serverUserURL + '/signup', newUser);
+    return this.myHttp.post(this.serverUserURL + '/register', newUser);
   }
 
   //Function to make a server request to api/users/login route
