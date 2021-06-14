@@ -1,22 +1,25 @@
 <nav class="navbar navbar-expand-sm   navbar-light bg-light">
 
-    <div>
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" *ngIf="!getToken()" routerLink="login" routerLinkActive="active">Login</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" *ngIf="!getToken()" routerLink="signup" routerLinkActive="active">Register</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="posts" routerLinkActive="active">All Posts</a>
-        </li>
+  <div>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item">
-        <a class="nav-link" *ngIf="getToken()" routerLink="profile" routerLinkActive="active" >Profile</a>
+        <a class="nav-link" *ngIf="!getToken()" routerLink="login" routerLinkActive="active">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="!getToken()" routerLink="signup" routerLinkActive="active">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="posts" routerLinkActive="active">All Posts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="list-users" routerLinkActive="active">All Users</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="getToken()" routerLink="profile" routerLinkActive="active">Profile</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" *ngIf="getToken()" (click)="logout()">Logout</a>
       </li>
-      </ul>
-    </div>
-  </nav>
+    </ul>
+  </div>
+</nav>

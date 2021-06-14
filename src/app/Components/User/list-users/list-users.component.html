@@ -1,0 +1,15 @@
+<div class="container" id="wrap">
+    <!-- each card is an individual user -->
+    <div id="card" class="card" *ngFor="let user of users">
+        <div class="profile-pic">
+            <img src="/assets/img/edward-cisneros-QSa-uv4WJ0k-unsplash-warRoom.jpg" class="img-responsive"
+                alt="people worshipping" style="width:100px;height:75px;">
+        </div>
+        <div class="card-header d-flex align-items-center justify-content-between">
+            <p>{{user.firstName}} {{user.lastName}}</p>
+            <p>{{user.username.toUpperCase()}}</p>
+        </div>
+        <!-- <div class="card-block"> -->
+        <!-- <p>{{post.body}}</p> -->
+        <!-- </div> -->
+    </div>

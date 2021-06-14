@@ -2,7 +2,7 @@ import { Component, EventEmitter, NgZone, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { PostService } from '../../../services/post.service';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+// import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-add-post',
@@ -15,7 +15,7 @@ export class AddPostComponent implements OnInit {
   postForm: FormGroup;
   closeModal: string;
   content: any;
-  modalref: NgbModalRef;
+  // modalref: NgbModalRef;
 
 
   constructor(
@@ -23,7 +23,7 @@ export class AddPostComponent implements OnInit {
     private myRouter: Router,
     private ngZone: NgZone,
     private postService: PostService,
-    private modalService: NgbModal
+    // private modalService: NgbModal
   ) {
     this.postForm = this.formBuilder.group({
       title: [''],

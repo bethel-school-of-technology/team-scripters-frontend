@@ -9,7 +9,7 @@
             <div ngbDropdown class="d-inline-block" *ngIf="getToken()">
               <button class="btn btn-sm" id="dropdownBasic1" ngbDropdownToggle>...</button>
               <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="drop">
-                <button ngbDropdownItem routerLink="/editPosts/{{post._id}}">Edit</button>
+                <button ngbDropdownItem><a routerLink="/editPosts/{{post._id}}">Edit</a></button>
                 <button ngbDropdownItem (click)="onDelete(post._id, i)">Delete</button>
               </div>
             </div>
@@ -18,7 +18,7 @@
       </div>
       <div class="card-block">
         <p>{{post.body}}</p>
-        <!-- <button type="button" class="btn btn-outline-info mr-1" routerLink="/editPosts/{{post._id}}">Edit</button>
+        <!-- <button type="button" class="btn btn-outline-info mr-1" routerLink="/edit-posts/{{post._id}}">Edit</button>
         <button type="button" class="btn btn-outline-danger mr-1" (click)="onDelete(post._id, i)">Delete</button> -->
         
     </div>

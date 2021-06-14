@@ -48,6 +48,17 @@ export class UserService {
     });
   }
 
+  getUsers() {
+    return this.myHttp.get(this.serverUserURL + '/search-users' );
+  }
+
+  //fix route below to get single user
+  
+  getSingleUser(id: string): Observable<any> {
+    let URL = `${this.serverUserURL}/${id}`;
+    return this.myHttp.get(URL)
+  }
+
   //Function to make a server request to /api/users/editProfile route
   //Type of request: PUT
   //need to provide username and password

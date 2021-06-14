@@ -8,6 +8,8 @@ import { PostsComponent } from './Components/posts/posts/posts.component';
 import { EditProfileComponent } from './Components/User/edit-profile/edit-profile.component';
 import { EditPostsComponent } from './Components/posts/edit-posts/edit-posts.component';
 import { AddPostComponent } from './Components/posts/add-post/add-post.component';
+import { PublicProfileComponent } from './Components/User/public-profile/public-profile.component';
+import { ListUsersComponent } from './Components/User/list-users/list-users.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'posts' },
@@ -15,10 +17,11 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'posts', component: PostsComponent },
-  { path: 'editProfile/:id', component: EditProfileComponent },
-  { path: 'editPosts/:id', component: EditPostsComponent},
-  { path: 'addPost', component: AddPostComponent},
-  
+  { path: 'edit-profile', component: EditProfileComponent },
+  { path: 'editPosts/:id', component: EditPostsComponent },
+  { path: 'addPost', component: AddPostComponent },
+  { path: 'list-users', component: ListUsersComponent},
+  { path: 'public-profile/:id', component: PublicProfileComponent}
 ];
 
 @NgModule({

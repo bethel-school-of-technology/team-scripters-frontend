@@ -1,15 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~bootstrap/dist/css/bootstrap.min.css";
 
 html,
 body {
   margin: 0;
   padding: 0;
+  height: auto;
   font-family: "Poppins", sans-serif;
   background: no-repeat center center fixed;
-  background-color:#e6efec;
+  background-color: #e6efec;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  position: relative;
+  min-height: 100%;
+  min-height: 100vh;
+}
+
+footer {
+  text-align: center;
+  background-color: #f8f9fa;
+  display: block;
+  margin-top: auto;
+  padding: 0;
+  position: absolute;
+  right: 0;bottom:0;left:0;
 }

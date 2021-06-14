@@ -1,0 +1,36 @@
+#wrap {
+  background-image: linear-gradient(#eaf2ef, #cde7de);
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+}
+
+p {
+  padding: 1em;
+}
+
+.profile-pic img {
+  margin: auto;
+  width: 50%;
+  height: 50%;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+
+.card-header {
+  background-color: rgb(226, 225, 225);
+  font-size: large;
+  font-weight: bolder;
+}
+.card {
+  margin: 2em auto;
+  width: auto;
+  border-radius: 6px;
+  justify-content: center;
+}
+
+#card {
+  background-image: linear-gradient(#eaf2ef, #cde7de);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
