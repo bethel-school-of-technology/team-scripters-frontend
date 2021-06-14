@@ -1,15 +1,16 @@
-<div class="container" id="wrap">
-    <!-- each card is an individual user -->
-    <div id="card" class="card" *ngFor="let user of users">
-        <div class="profile-pic">
-            <img src="/assets/img/edward-cisneros-QSa-uv4WJ0k-unsplash-warRoom.jpg" class="img-responsive"
-                alt="people worshipping" style="width:100px;height:75px;">
+<div class="container justify-content-around">
+    <div class="col-md-4 col-sm-6" id="wrap" *ngFor="let user of users">
+        <!-- each card is an individual user -->
+        <div id="card" class="card">
+            <div class="profile-pic justify-content-between">
+                <img src="/assets/img/edward-cisneros-QSa-uv4WJ0k-unsplash-warRoom.jpg" class="img-responsive"
+                    alt="people worshipping" style="width:100px;height:75px;">
+                </div>
+                <div class="card-header"> 
+                 <p><strong>Name:</strong> {{user.firstName}} {{user.lastName}}</p>
+                <p><strong>Username:</strong> {{user.username.toUpperCase()}}</p>
+                <p><strong>Email:</strong> {{user.email}}</p>
+            </div>
         </div>
-        <div class="card-header d-flex align-items-center justify-content-between">
-            <p>{{user.firstName}} {{user.lastName}}</p>
-            <p>{{user.username.toUpperCase()}}</p>
-        </div>
-        <!-- <div class="card-block"> -->
-        <!-- <p>{{post.body}}</p> -->
-        <!-- </div> -->
     </div>
+</div>
