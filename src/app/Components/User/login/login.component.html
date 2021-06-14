@@ -1,23 +1,29 @@
 <div class="wrapper fadeInDown">
-    <div id="formContent">
-      <!-- Tabs Titles -->
-  
-      <!-- Icon -->
-      <div class="fadeIn first">
-        <h3>WarRoom</h3>
-      </div>
-  
-      <!-- Login Form -->
-      <form (ngSubmit)="onSubmit()">
-        <input type="text" id="username" class="fadeIn second" name="login" placeholder="username" [(ngModel)]="model.username">
-        <input type="text" id="password" class="fadeIn third" name="login" placeholder="password" [(ngModel)]="model.password">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <h3>WarRoom</h3>
+    </div>
+
+    <!-- Login Form -->
+    <div class="form-group">
+      <form #login="ngForm" (ngSubmit)="onSubmit()">
+        <input type="text" id="fadeIn second" class="form-control" name="username" placeholder="username"
+          [(ngModel)]="model.username" required>
+        <input type="text" id="fadeIn third" class="form-control" name="password" placeholder="password"
+          [(ngModel)]="model.password" required>
         <input type="submit" class="fadeIn fourth" value="Log In">
       </form>
-  
-      <!-- Create Account -->
-      <div id="formFooter">
-        <a class="underlineHover" routerLink="/signup" title="sign up">Create an Account</a>
-      </div>
-  
     </div>
+    <!-- Create Account -->
+    <div id="formFooter">
+      <a class="underlineHover" routerLink="/signup" title="sign up">Create an Account</a>
+    </div>
+
   </div>
+</div>
+
+
+

@@ -19,7 +19,7 @@ export class UserService {
   //Change 'any' to the user model when available
 
   registerUser(newUser: User): Observable<any> {
-    return this.myHttp.post(this.serverUserURL + '/signup', newUser);
+    return this.myHttp.post(this.serverUserURL + '/register', newUser);
   }
 
   //Function to make a server request to api/users/login route
@@ -46,6 +46,17 @@ export class UserService {
     return this.myHttp.get(this.serverUserURL + '/profile', {
       headers: myHeaders,
     });
+  }
+
+  getUsers() {
+    return this.myHttp.get(this.serverUserURL + '/search-users' );
+  }
+
+  //fix route below to get single user
+  
+  getSingleUser(id: string): Observable<any> {
+    let URL = `${this.serverUserURL}/${id}`;
+    return this.myHttp.get(URL)
   }
 
   //Function to make a server request to /api/users/editProfile route

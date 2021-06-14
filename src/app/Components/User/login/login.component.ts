@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { Login } from '../../../Shared/models/login';
 import { UserService } from '../../../services/user.service';
 

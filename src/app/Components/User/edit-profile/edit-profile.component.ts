@@ -16,13 +16,11 @@ export class EditProfileComponent implements OnInit {
     lastName: new FormControl(''),
     email: new FormControl(''),
     username: new FormControl(''),
-    //password: new FormControl(''),
   });
 
   currentUser: User = new User();
 
   constructor(
-    //public user: User[],
     private myUserService: UserService,
     private myRouter: Router,
     private activatedRoute: ActivatedRoute

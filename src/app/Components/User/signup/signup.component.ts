@@ -25,7 +25,7 @@ model: User = new User();
         //successful Login
         window.alert(myResponseObject.message);
         localStorage.setItem("myAppToken", myResponseObject.token);
-        this.myRouter.navigate(["/profile"]);
+        this.myRouter.navigate(["/login"]);
       } else{
         //Unsuccessful Login
         window.alert(myResponseObject.message);

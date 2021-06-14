@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -14,6 +15,8 @@ import { PostsComponent } from './Components/posts/posts/posts.component';
 import { EditProfileComponent } from './Components/User/edit-profile/edit-profile.component';
 import { EditPostsComponent } from './Components/posts/edit-posts/edit-posts.component';
 import { AddPostComponent } from './Components/posts/add-post/add-post.component';
+import { ListUsersComponent } from './Components/User/list-users/list-users.component';
+import { PublicProfileComponent } from './Components/User/public-profile/public-profile.component';
 
 @NgModule({
   declarations: [
@@ -26,9 +29,12 @@ import { AddPostComponent } from './Components/posts/add-post/add-post.component
     EditProfileComponent,
     EditPostsComponent,
     AddPostComponent,
+    ListUsersComponent,
+    PublicProfileComponent,
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,

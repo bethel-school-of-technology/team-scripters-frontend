@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { User } from '../../../Shared/models/user';
 import { Router } from '@angular/router';
 import { UserService } from '../../../services/user.service';
-import { NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { PostsComponent } from '../../posts/posts/posts.component';
 
 @Component({
@@ -39,7 +39,7 @@ export class ProfileComponent implements OnInit {
      this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'})
   }
 
-  //function to close the modal 'create post' and run the PostsComponents ngONInit to refresh the page
+  // function to close the modal 'create post' and run the PostsComponents ngONInit to refresh the page
   closeModal(){
     this.modalService.dismissAll();
     this.child.ngOnInit();
