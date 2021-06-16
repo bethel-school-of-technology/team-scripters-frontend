@@ -9,13 +9,13 @@
         <a class="nav-link" *ngIf="!getToken()" routerLink="signup" routerLinkActive="active">Register</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="posts" routerLinkActive="active">All Posts</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" *ngIf="getToken()" routerLink="list-users" routerLinkActive="active">All Users</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" *ngIf="getToken()" routerLink="profile" routerLinkActive="active">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="posts" routerLinkActive="active">Requests</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="getToken()" routerLink="list-users" routerLinkActive="active">Members</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" *ngIf="getToken()" (click)="logout()">Logout</a>
