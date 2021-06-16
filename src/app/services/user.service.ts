@@ -70,4 +70,17 @@ export class UserService {
     };
     return this.myHttp.put(this.serverUserURL + '/edit-profile', userInfo);
   }
+  
+  changePassword(data){
+    var headers = new HttpHeaders()
+      .set('Authorization', localStorage.getItem('myAppToken'));
+  
+    var options =  {
+        headers: headers
+    };
+    return this.myHttp.put('http://localhost:5000/api/edit-password',data, options)
+  }
+
 }
+
+
