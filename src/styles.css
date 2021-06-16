@@ -18,12 +18,12 @@ body {
   min-height: 100vh;
 }
 
-footer {
-  text-align: center;
-  background-color: #f8f9fa;
-  display: block;
-  margin-top: auto;
-  padding: 0;
-  position: absolute;
-  right: 0;bottom:0;left:0;
-}
+/* footer { */
+  /* text-align: center; */
+  /* background-color: #f8f9fa; */
+  /* display: block; */
+  /* margin-top: auto; */
+  /* padding: 0; */
+  /* position: absolute; */
+  /* right: 0;bottom:0;left:0; */
+/* } */
