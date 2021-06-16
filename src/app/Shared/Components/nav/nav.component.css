@@ -9,7 +9,7 @@ ul li a {
 
 a:hover,
 a:active {
-  transition: 0.7s;
+  transition: 0.7s; 
   background-color: rgb(199, 199, 199);
   border-radius: 10%;
 }

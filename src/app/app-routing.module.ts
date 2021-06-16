@@ -10,6 +10,7 @@ import { EditPostsComponent } from './Components/posts/edit-posts/edit-posts.com
 import { AddPostComponent } from './Components/posts/add-post/add-post.component';
 import { PublicProfileComponent } from './Components/User/public-profile/public-profile.component';
 import { ListUsersComponent } from './Components/User/list-users/list-users.component';
+import { UpdatePasswordComponent } from './Components/User/update-password/update-password.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'posts' },
@@ -21,7 +22,8 @@ const routes: Routes = [
   { path: 'editPosts/:id', component: EditPostsComponent },
   { path: 'addPost', component: AddPostComponent },
   { path: 'list-users', component: ListUsersComponent},
-  { path: 'public-profile/:id', component: PublicProfileComponent}
+  { path: 'public-profile/:id', component: PublicProfileComponent},
+  { path: 'edit-password', component: UpdatePasswordComponent},
 ];
 
 @NgModule({
